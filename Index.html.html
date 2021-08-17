@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <link rel="stylesheet" type="text/css" href= "style.css">
+    <title>Ansh_Site</title>
+    <script 
+        src="https://code.jquery.com/jquery-3.6.0.js" 
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</head>
+<body>
+    <div class = "container" id = "container">
+        <nav class = "navbar" id = "navbar">
+            <img class = "logo" src = "Logo.png">
+            <span class = "first">A</span>
+            <span class = "title"> nsh<span class = "second">A</span> .Com</span>
+            <ul>
+                <li><a href = "#home">Home</a></li>
+                <li><a href = "#about">About Me</a></li>
+                <li><a href = "#projects">Projects</a></li>
+                <li><a href = "#contacts">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class = "First_Image" id = "home">
+        <img class = "ansh" src = "Ansh.png">
+        <p class = "Ansh_Agarwal">Ansh Agarwal</p>
+        <p class = "intro">Hi there visitor! <br>Glad to be having you!</p>
+        <img class = "smiley" src = "Smiley.png">
+        <div class="wrapper">
+            <ul class="dynamic-txts">
+              <li><span>Coder</span></li>
+              <li><span>Economist</span></li>
+              <li><span>Anime Fan :D</span></li>
+              <li><span>Web Developer</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class = "black_portion" id = "about">
+        <p class = "About_ME">About Me</p>
+        <p class = "desc">Buttons on Left for more info!</p>
+        <p class = "help">
+            Hello! I am currently a grade 12 student attending Milliken Mills High School as of Fall 2021.
+            My interests lie in the field of competitive programming, mathematics, economics, web/game development and I'd like to pursue a career in the Data Sciences.
+            In my spare time I enjoy: reading old classics as well as new novels, playing video games with my friends (such as this horrible game League of Legends) watching t.v shows, animes, old and new movies, as well as listening to a wide genre of music.
+            If you'd like to talk more all my contacts are below! :D
+        </p>
+        <button type = "button" onclick = "cp()" class = "cpButton"></button>
+        <img id = "dmoj" class = "dmoj" src = "dmoj.png">
+        <p id = "cpTitle" class = "cpTitle">Competitive Programming</p>
+        <p id = "cpDescription" class = "cpDescription">
+            I've been learning competitive programming for a year and a half and have mainly progressed on Dmoj.com. I'm ranked 510th out of 88,000+ participants and have participated in multiple contests.
+            My profile can be found on https://dmoj.ca/user.
+        </p>
+        <button type = "button" onclick = "web()" class = "webButton"></button>
+        <p id = "webTitle" class = "webTitle">Web & Game Development</p>
+        <p id = "webDescription" class = "webDescription">
+            I am also an enthusiast of game and web development which I have been doing since start of 2021. I've coded some retro old games such as tetris and pong (which you can see bouncing in the background) using HTML and javascript. 
+            I would like to expand my knowledge and begin coding games in Unity which will be my next step :D. All my projects can be found on my github here: https://github.com/AnshV2.
+        </p>
+        <button type = "button" onclick = "econ()" class = econButton></button>
+        <p id = "econTitle" class = "econTitle">Economist</p>
+        <p id = "econDescription" class = "econDescription">
+            I am also a passionate learniner of economics. Having participated in many contests such as the Canadian Economic Olympiad and business contests as well I have also learned to apply my economics 
+            skills to various places. I am also an economics tutor for organizations such as TutorOn and am a marketing trainer for our school's business club. I hope to apply my economics skills in my data 
+            science profession to help businesses maximize profits.
+        </p>
+        <canvas></canvas>
+    </div>
+    <div class = "final_portion" id = "projects">
+        <p class = "portfolio" >Portfolio</p>
+        <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true,  "draggable": false }'>
+            
+            <div class="gallery-cell">
+                <p class = "SnakeTitle">SnakeVAnsh</p>
+                <p class = "SnakeDescription">
+                    My own Rendition of the popular game Snake. 
+                    Built using Html, CSS, and Javascript with the tools html canvas as well as html Grid. 
+                    I built this with the help of online guides and used it as a platform to build more complicated games 
+                    and websites. Downloadable on my github here: https://github.com/AnshV2/PongVAnsh
+                </p>
+                <img src = "Snake.JPG" class = "Snake">
+            </div>
+            <div class="gallery-cell">
+                <p class = "TetrisTitle">TetrisVAnsh</p>
+                <p class = "TetrisDescription">
+                    My rendition of Tetris :D. 
+                    Utilizes html canvas and grid with event listeners. 
+                    Uses the scoring and spin system of 
+                    official nintendo NES Tetris. Tetris being a favorite game of mine I was super excited to recreate the game 
+                    and am very pleased with the results. Downloadable on my github here: https://github.com/AnshV2/TetrisVAnsh
+                </p>
+                <img src = "Tetris.JPG" class = "Tetris">
+            </div>
+            <div class="gallery-cell">
+                <p class = "ViTitle">ViBot</p>
+                <p class = "ViDescription">
+                    This bot reads in message with the v!mood command followed by a message. 
+                    After detecting the mood of the message, the bot then sends a corresponding song that 
+                    matches the mood and produces an emotion score ranging from -1 (sad) to 1 (happy). Achieved 
+                    2nd place overall in YR Hacks 2021 and the best application of a database! 
+                    Link: https://devpost.com/software/vibot?ref_content=user-portfolio&ref_feature=in_progress
+                </p>
+                <img src = "Vi.JPG" class = "Vi">
+            </div>
+        </div>
+        <h1 class = "filler" id = "contacts">Contact Info</h1>
+        <ul class = "icons">
+            <li class = "listf"><i class="fab fa-discord"></i></li>
+            <p class = "discName" id = "discName">AneeshyBoneechyElectric#4714</p>
+            <li class = "listf" onclick = NewTab()><i class="fab fa-instagram"></i></li>
+            <li class = "listf" onclick = Open()><i class="fab fa-spotify"></i></li>
+            <a href = "https://www.linkedin.com/in/ansh-agarwal-81424a219/" class = "listf"><li><i class="fab fa-linkedin-in"></i></li></a>
+            <a href = "https://github.com/AnshV2" class = "listf"><li ><i class="fab fa-github"></i></li></a>
+         </ul>
+         <p class = "mail" id = "mail">Gmail: anshagarwal0419@gmail.com</p>
+    </div>
+    <script src = "lescript.js">
+    </script>
+</body>
+
+</html>
+        
